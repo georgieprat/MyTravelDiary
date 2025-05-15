@@ -41,6 +41,7 @@ var bounds = L.latLngBounds(
 );
 
 if (window.isMobile === true) {
+    console.log("Handy")
     let minZ = 1;
 } else if (window.isMobile === false) {
     console.log("Desktop")
