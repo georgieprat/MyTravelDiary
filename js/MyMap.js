@@ -40,16 +40,9 @@ var bounds = L.latLngBounds(
     L.latLng(85, 185)
 );
 
-if (window.isMobile === true) {
-    console.log("Handy")
-    let minZ = 1;
-} else if (window.isMobile === false) {
-    console.log("Desktop")
-    let minZ = 3;
-} else {
-    console.log("What device is this?")
-    let minZ = 3;
-}
+const minZ = window.isMobile === true ? 1 : 3;
+
+console.log("minZ: ", minZ)
 
 var map = L.map('map', {
     minZoom: minZ,
