@@ -9,7 +9,7 @@ if (/mobile|android|iphone|ipad|tablet/.test(userAgent)) {
     console.log("Mobile device");
 } else {
     window.isMobile = false;
-    console.log("Desktop device",isMobile);
+    console.log("Desktop device");
 }
 
 // Add blur on page load
@@ -43,6 +43,7 @@ var bounds = L.latLngBounds(
 if (window.isMobile === true) {
     let minZ = 1;
 } else if (window.isMobile === false) {
+    console.log("Desktop")
     let minZ = 3;
 } else {
     console.log("What device is this?")
