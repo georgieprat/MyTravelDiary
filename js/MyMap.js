@@ -19,14 +19,16 @@ document.body.classList.add('StartMenu-active');
 document.getElementById('StartMenu').addEventListener('click', function () {
     document.getElementById('StartMenu').style.display = 'none';
     document.body.classList.remove('StartMenu-active');
-    const box = document.getElementById('countrySearch');
-    box.focus();
+    if (isMobile === false) {
+        const box = document.getElementById('countrySearch');
+        box.focus();
+    }
 });
 
 document.getElementById('map').addEventListener('click', function () {
     if (isMobile === false) {
-    const box = document.getElementById('countrySearch');
-    box.focus();
+        const box = document.getElementById('countrySearch');
+        box.focus();
     }
 });
 
