@@ -40,8 +40,17 @@ var bounds = L.latLngBounds(
     L.latLng(85, 185)
 );
 
+if (isMobile === true) {
+    let minZ = 1;
+} else if (isMobile === false) {
+    let minZ = 3;
+} else {
+    console.log("What device is this?")
+    let minZ = 3;
+}
+
 var map = L.map('map', {
-    minZoom: 3,
+    minZoom: minZ,
     maxZoom: 10,
     maxBounds: bounds,
     maxBoundsViscosity: 1.0,  // Fully restrict dragging outside
