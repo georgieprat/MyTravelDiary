@@ -6,10 +6,10 @@ const userAgent = navigator.userAgent.toLowerCase();
 
 if (/mobile|android|iphone|ipad|tablet/.test(userAgent)) {
     const isMobile = true;
-  console.log("Mobile device");
+    console.log("Mobile device");
 } else {
     const isMobile = false;
-  console.log("Desktop device");
+    console.log("Desktop device",isMobile);
 }
 
 // Add blur on page load
