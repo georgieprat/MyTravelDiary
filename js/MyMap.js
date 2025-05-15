@@ -2,6 +2,16 @@ import { hoverclick } from './Hover-Click-Logic.js';
 import { Dropdown } from './Dropdown.js';
 import { Searcher } from './SearchFuncV2.js';
 
+const userAgent = navigator.userAgent.toLowerCase();
+
+if (/mobile|android|iphone|ipad|tablet/.test(userAgent)) {
+    const isMobile = true;
+  console.log("Mobile device");
+} else {
+    const isMobile = false;
+  console.log("Desktop device");
+}
+
 // Add blur on page load
 document.body.classList.add('StartMenu-active');
 
@@ -14,8 +24,10 @@ document.getElementById('StartMenu').addEventListener('click', function () {
 });
 
 document.getElementById('map').addEventListener('click', function () {
+    if (isMobile === false) {
     const box = document.getElementById('countrySearch');
     box.focus();
+    }
 });
 
 var bounds = L.latLngBounds(
