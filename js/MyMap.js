@@ -5,10 +5,10 @@ import { Searcher } from './SearchFuncV2.js';
 const userAgent = navigator.userAgent.toLowerCase();
 
 if (/mobile|android|iphone|ipad|tablet/.test(userAgent)) {
-    const isMobile = true;
+    window.isMobile = true;
     console.log("Mobile device");
 } else {
-    const isMobile = false;
+    window.isMobile = false;
     console.log("Desktop device",isMobile);
 }
 
