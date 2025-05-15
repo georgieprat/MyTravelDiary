@@ -29,6 +29,9 @@ document.getElementById('map').addEventListener('click', function () {
     if (isMobile === false) {
         const box = document.getElementById('countrySearch');
         box.focus();
+    } else {
+        const box = document.getElementById('countrySearch');
+        box.blur();
     }
 });
 
