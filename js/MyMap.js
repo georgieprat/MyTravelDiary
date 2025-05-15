@@ -19,14 +19,14 @@ document.body.classList.add('StartMenu-active');
 document.getElementById('StartMenu').addEventListener('click', function () {
     document.getElementById('StartMenu').style.display = 'none';
     document.body.classList.remove('StartMenu-active');
-    if (isMobile === false) {
+    if (window.isMobile === false) {
         const box = document.getElementById('countrySearch');
         box.focus();
     }
 });
 
 document.getElementById('map').addEventListener('click', function () {
-    if (isMobile === false) {
+    if (window.isMobile === false) {
         const box = document.getElementById('countrySearch');
         box.focus();
     } else {
@@ -40,9 +40,9 @@ var bounds = L.latLngBounds(
     L.latLng(85, 185)
 );
 
-if (isMobile === true) {
+if (window.isMobile === true) {
     let minZ = 1;
-} else if (isMobile === false) {
+} else if (window.isMobile === false) {
     let minZ = 3;
 } else {
     console.log("What device is this?")
