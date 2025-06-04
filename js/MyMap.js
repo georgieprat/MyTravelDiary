@@ -1,5 +1,4 @@
 import { hoverclick } from './Hover-Click-Logic.js';
-import { Dropdown } from './Dropdown.js';
 import { Searcher } from './SearchFuncV2.js';
 
 const userAgent = navigator.userAgent.toLowerCase();
@@ -102,7 +101,7 @@ fetch('CNTR_RG_01M_2020/CNTR_RG_01M_2020_4326_2.json')
                     });
                 }
 
-                hoverclick(layer, feature, selectedCountries, updateSelectedUI);
+                hoverclick(layer);
                 
             }
         }).addTo(map);

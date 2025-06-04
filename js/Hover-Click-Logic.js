@@ -1,7 +1,7 @@
 // Counter to track number of polygons chosen
 let clicked = null;
 
-export function hoverclick(layer, feature, selectedCountries, updateSelectedUI) {
+export function hoverclick(layer) {
     layer.on({
         mouseover: function (e) {
             e.target.setStyle(Styles.Highlighted);
