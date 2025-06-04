@@ -83,15 +83,6 @@ fetch('CNTR_RG_01M_2020/CNTR_RG_01M_2020_4326_2.json')
             style: Styles.Default,
 
             onEachFeature: function (feature, layer) {
-                // Optional: log available properties
-                //console.log('Feature properties:', feature.properties);
-                // Add event listeners for hover and click
-                const countryName = feature.properties.CNTR_NAME.toLowerCase();
-                const countryENGL = feature.properties.NAME_ENGL.toLowerCase();
-                const countryFREN = feature.properties.NAME_FREN.toLowerCase();
-                const countryGERM = feature.properties.NAME_GERM.toLowerCase();
-                const countryISO3 = feature.properties.ISO3_CODE.toLowerCase();
-                const countryID = feature.properties.CNTR_ID.toLowerCase();
 
                 if (feature.properties) {
                     const keys = [
